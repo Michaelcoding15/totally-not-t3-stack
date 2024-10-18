@@ -1,6 +1,6 @@
 import { sqliteTable, text, integer, primaryKey } from 'drizzle-orm/sqlite-core';
 
-
+// Boilerplate for auth.js and drizzle connection
 export const users = sqliteTable("user", {
 	id: text("id")
 		.primaryKey()

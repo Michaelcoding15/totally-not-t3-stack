@@ -7,7 +7,8 @@
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<button on:click={() => signIn()}>Sign in!</button>
-<button on:click={() => signOut()}>Sign out!</button>
-<h1>{$page.data.session?.user?.name}</h1>
+<br>
+<button on:click={() => $page.data.session ? signOut() : signIn()} class="border-2 border-black p-1">{$page.data.session ? "Sign out!" : "Sign in!"}</button>
+<br><br>
+<h1>{$page.data.session?.user?.name ? $page.data.session?.user?.name : "Hello!"}</h1>
 <h1>{data.greeting}</h1>
