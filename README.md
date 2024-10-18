@@ -2,7 +2,7 @@
 This stack uses many components in the T3 stack, but it uses Svelte instead of Next.JS.
 
 ## Creating a project
-Clone this project, install all the packages, and configure the `.env`
+Clone this project, install all the packages, remove the `.git` folder and configure the `.env`
 
 ```bash
 # clone this project
@@ -10,6 +10,9 @@ git clone https://github.com/Michaelcoding15/totally-not-t3-stack
 
 # install all of the packages
 pnpm i
+
+# remove .git
+rm -rf .git
 
 # configure the .env file
 ```
