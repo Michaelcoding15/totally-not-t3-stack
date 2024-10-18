@@ -1,9 +1,8 @@
 import { defineConfig } from 'drizzle-kit';
+import * as process from 'node:process';
 if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is not set');
 
 export default defineConfig({
-	schema: './src/lib/server/db/schema.ts',
-
 	dbCredentials: {
 		url: process.env.DATABASE_URL,
 		authToken: process.env.DATABASE_AUTH_TOKEN
@@ -11,6 +10,6 @@ export default defineConfig({
 
 	verbose: true,
 	strict: true,
-	driver: 'turso',
-	dialect: 'sqlite'
+	dialect: 'turso',
+	schema: './src/lib/server/db/schema/*',
 });
