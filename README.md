@@ -1,38 +1,31 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# Totally Not T3 Stack
+This stack uses many components in the T3 stack, but it uses Svelte instead of Next.JS.
 
 ## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Clone this project, install all the packages, and configure the `.env`
 
 ```bash
-npm run dev
+# clone this project
+git clone https://github.com/Michaelcoding15/totally-not-t3-stack
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# install all of the packages
+pnpm i
+
+# configure the .env file
 ```
 
-## Building
+## Tools
+This stack includes:
+- SvelteKit
+- Drizzle
+- Tailwind
+- tRPC
+- Auth.js
 
-To create a production version of your app:
+# Drizzle
+This demo is designed using Turso, so go to https://authjs.dev/getting-started/adapters/drizzle and https://orm.drizzle.team/docs/drizzle-config-file if you want to use something besides Turso. Otherwise, create a turso group and database, and then fill in the `.env`
 
-```bash
-npm run build
-```
+# Auth.js
+This demo uses google oauth, so you will need to follow the steps in https://developers.google.com/identity/protocols/oauth2 to create your google app. If you don't want to use google, please read the method you want to use in https://authjs.dev/getting-started/authentication.
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### All other configuration is taken care of. Happy Coding!
